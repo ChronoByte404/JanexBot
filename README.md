@@ -64,8 +64,7 @@ if __name__ == "__main__":
 ### Data Format
 
 Ensure your database.json file follows this format:
-```
-json
+``` json
 
 {
   "prompts": [
@@ -80,5 +79,4 @@ json
 ```
 ### Notes
 
-    The provided code is a prototype. You may need to further test and refine it based on user interactions and real-world scenarios.
-    Make sure the spaCy language model en_core_web_sm is available and working as expected.
+    The provided code is a prototype.
