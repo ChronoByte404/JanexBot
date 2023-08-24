@@ -18,10 +18,11 @@ Follow these instructions to set up and use JanexBot:
 2. Install the required Python libraries:
    ```bash
    pip install spacy numpy
+   ```
 
     Download the spaCy language model (English) by running:
 
-    bash
+    ```bash
 
     python -m spacy download en_core_web_sm
     ```
