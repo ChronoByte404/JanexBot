@@ -17,9 +17,10 @@ class JanexBot:
         self.database_file_path = database_file_path
         self.database = self.loadQA()
 
-    def vectorize(self, text):
-        vectors = self.nlp(text).vector
-        return vectors
+    def vectorize(self, input_string):
+        input_doc = self.nlp(input_string)
+        input_vectors = input_doc.vector
+        return input_vectors
 
     def loadQA(self):
         with open(self.database_file_path, "r") as f:
@@ -77,7 +78,7 @@ class JanexBot:
         data = self.loadQA()
         new_prompt = {
             "question": question,
-            "question_vectors": self.vectorize(question),
+            "question_vectors": self.vectorize(question).tolist(),
             "answers": answers
         }
         data["prompts"].append(new_prompt)
@@ -128,6 +129,13 @@ class JanexBot:
                 return True
 
         return False
+
+    def train(self):
+        Question = input("Question: ")
+        Vectors = self.vectorize(Question)
+        Answer = input("Answer: ")
+        Answers = [Answer]
+        self.save_question(Question, Answers)
 
 if __name__ == "__main__":
     chatbot = JanexBot("database.json", "en_core_web_sm")
