@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
   You can exit the chatbot by interrupting the script (e.g., pressing Ctrl+C).
 
-Data Format
+### Data Format
 
 Ensure your database.json file follows this format:
 ```
@@ -78,7 +78,7 @@ json
   ]
 }
 ```
-Notes
+### Notes
 
     The provided code is a prototype. You may need to further test and refine it based on user interactions and real-world scenarios.
     Make sure the spaCy language model en_core_web_sm is available and working as expected.
