@@ -47,21 +47,19 @@ def main():
 
 if __name__ == "__main__":
     main()
-      ```
+```
+
 ### Usage
 
-    Place your question-answer data in a JSON file named database.json in the same directory as the script.
+  Place your question-answer data in a JSON file named database.json in the same directory as the script.
 
-    Run the chatbot script:
-    ```bash
-    python chatbot.py
-    ```
+  Run the chatbot script.
 
-    The chatbot will start interacting with you. It will provide prompts and respond to your input.
+  The chatbot will start interacting with you. It will provide prompts and respond to your input.
 
-    When asked a question, you can answer, and the chatbot will try to find the most relevant question based on your answer.
+  When asked a question, you can answer, and the chatbot will try to find the most relevant question based on your answer.
 
-    You can exit the chatbot by interrupting the script (e.g., pressing Ctrl+C).
+  You can exit the chatbot by interrupting the script (e.g., pressing Ctrl+C).
 
 Data Format
 
