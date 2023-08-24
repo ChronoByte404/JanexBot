@@ -3,7 +3,7 @@ README.md
 setup.py
 JanexBot/__init__.py
 JanexBot/chat.py
-JanexBot/emain.py
+JanexBot/main.py
 JanexBot/train.py
 JanexBot.egg-info/PKG-INFO
 JanexBot.egg-info/SOURCES.txt
