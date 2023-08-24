@@ -73,6 +73,26 @@ class JanexBot:
         with open(self.database_file_path, "w") as json_file:
             json.dump(data, json_file, indent=4, separators=(',', ': '))
 
+    def save_question(self, question, answers):
+        data = self.loadQA()
+        new_prompt = {
+            "question": question,
+            "question_vectors": self.vectorize(question),
+            "answers": answers
+        }
+        data["prompts"].append(new_prompt)
+
+        with open(self.database_file_path, "w") as json_file:
+            json.dump(data, json_file, indent=4, separators=(',', ': '))
+
+    def generate_definition_answer(self, word):
+        synsets = wordnet.synsets(word)
+        if synsets:
+            definition = synsets[0].definition()
+            return f"The definition of {word} is: {definition}"
+        else:
+            return None
+
     def calculate_cosine_similarity(self, vector1, vector2):
         target_dim = 300
         vector1 = np.resize(vector1, target_dim)
